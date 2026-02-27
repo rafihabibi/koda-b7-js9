@@ -3,7 +3,6 @@ function proccesorArray(arr, proccesor){
   
   for(let i=0; i < arr.length;i++) {
     let ambilData = arr[i];
-    
     let hasilCallback = proccesor(ambilData);
       arrKosong.push(hasilCallback);
     }
