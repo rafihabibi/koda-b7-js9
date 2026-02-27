@@ -9,11 +9,12 @@ function callBackFunc(arr, callBackArr){
     }
     return arrKosong;
   }
-let angkaArr = [1, 2, 3, 4, 5];
 
-function runCallback(angka) {
-  return angka * 2;
+//Untuk menjalankan Callback.
+let dataArr = [1, 2, 3, 4, 5];
+function jalankanCallback(angka) {
+    return angka + 2;
 }
 
-let hasil = callBackFunc(angkaArr,runCallback);
+let hasil = callBackFunc(dataArr, jalankanCallback);
 console.log(hasil);
