@@ -1,4 +1,4 @@
-function callBackFunc(arr, proccesor){
+function proccesorArray(arr, proccesor){
   let arrKosong = [];
   
   for(let i=0; i < arr.length;i++) {
@@ -15,6 +15,6 @@ const dollar = num => `$${num}`;
 const addFive = num => `Hasil :${num + 5}`;
 
 const number = [1,2,3,4,5];
-console.log(callBackFunc(number, showNumber));
-console.log(callBackFunc(number, dollar));
-console.log(callBackFunc(number, addFive));
+console.log(proccesorArray(number, showNumber));
+console.log(proccesorArray(number, dollar));
+console.log(proccesorArray(number, addFive));
