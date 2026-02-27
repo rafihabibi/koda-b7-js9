@@ -1,20 +1,20 @@
-function callBackFunc(arr, callBackArr){
+function callBackFunc(arr, proccesor){
   let arrKosong = [];
   
   for(let i=0; i < arr.length;i++) {
     let ambilData = arr[i];
     
-    let hasilCallback = callBackArr(ambilData);
+    let hasilCallback = proccesor(ambilData);
       arrKosong.push(hasilCallback);
     }
     return arrKosong;
   }
 
-//Untuk menjalankan Callback.
-let dataArr = [1, 2, 3, 4, 5];
-function jalankanCallback(angka) {
-    return angka + 2;
-}
+const showNumber = num => `Number: ${num}`;
+const dollar = num => `$${num}`;
+const addFive = num => `Hasil :${num + 5}`;
 
-let hasil = callBackFunc(dataArr, jalankanCallback);
-console.log(hasil);
+const number = [1,2,3,4,5];
+console.log(callBackFunc(number, showNumber));
+console.log(callBackFunc(number, dollar));
+console.log(callBackFunc(number, addFive));
